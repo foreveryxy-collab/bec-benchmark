@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+results_smoke/
+*.log
+.DS_Store
