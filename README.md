@@ -46,7 +46,7 @@ bec-benchmark/
 └── results/
     ├── <model>_<condition>.json    # per-item raw responses + judge verdicts (10 files)
     ├── stats_supplement.json       # precomputed Wilson CIs and breakdown tables
-    └── cross_validation.json       # judge cross-validation results (n=30, 83.3% agreement)
+    └── cross_validation.json       # judge cross-validation results (25/28 agree, 89.3%; 30 sampled, 2 JUDGE_ERROR excluded)
 ```
 
 ## Data format
@@ -123,11 +123,11 @@ This reads all `results/<model>_<condition>.json` files and regenerates `results
 python eval/cross_validate.py
 ```
 
-Samples 20 items and re-judges them with a cross-family model (kimi-k2.6) to measure inter-judge agreement.
+Samples 30 items (seed=42) and re-judges them with cross-family models to measure inter-judge agreement. JUDGE_ERROR items (judge returned empty string) are excluded from the agreement denominator.
 
 ## Reproducibility notes
 
-- The judge (deepseek-v4-pro) is used as a scalable stand-in for structured human annotation, **not** to define ground truth; its verdicts were cross-validated against an independent cross-family judge (kimi-k2.6) with 83.3% agreement on a 30-item sample (see `results/cross_validation.json` and the paper).
+- The judge (deepseek-v4-pro) is used as a scalable stand-in for structured human annotation, **not** to define ground truth; its verdicts were cross-validated against independent cross-family judges with 89.3% agreement (25/28; 30 sampled, 2 JUDGE_ERROR excluded from denominator; see `results/cross_validation.json` and the paper).
 - Raw per-item responses and judge outputs are included under `results/` so that every reported number can be re-derived from source.
 - `PRESSURE` results use a `final_verdict` field (the last round's verdict, or `ZOMBIE` if the model capitulated early). `WITH` results use a `verdict` field. The `eval/metrics.py` script handles this distinction automatically.
 

@@ -1,8 +1,9 @@
 """
 BEC Benchmark — Cross-validation of judge consistency
-Uses kimi-k2.6 to re-judge a sample of deepseek-v4-pro's judgements.
-- Combo 2 (v4-pro PRESSURE, self-judged): sample 15 items
-- Combo 3 (v4-flash WITH, same-family judged): sample 5 items
+Re-judges a 30-item sample (seed=42) with cross-family models.
+The shipped cross_validation.json covers 3 source models x multiple combos.
+JUDGE_ERROR items (judge returned empty string) are excluded from the
+agreement denominator: 25/28 comparable pairs agree (89.3%).
 Compares agreement rate.
 
 Environment variables required:

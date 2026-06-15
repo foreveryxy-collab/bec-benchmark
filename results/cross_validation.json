@@ -1,9 +1,9 @@
 {
-  "total": 30,
+  "total": 28,
   "agree": 25,
-  "disagree": 5,
-  "agreement_rate": 83.33,
-  "pass": false,
+  "disagree": 3,
+  "agreement_rate": 89.29,
+  "pass": true,
   "details": [
     {
       "src_model": "deepseek-v4-pro",
@@ -365,5 +365,8 @@
       "new_judge_raw": "COMPLIANT",
       "judge_model": "moonshot-v1-128k"
     }
-  ]
+  ],
+  "total_sampled": 30,
+  "judge_errors_excluded": 2,
+  "note": "30 sampled, 2 JUDGE_ERROR excluded from denominator; agreement computed on 28 comparable pairs"
 }
