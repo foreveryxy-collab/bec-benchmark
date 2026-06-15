@@ -6,7 +6,7 @@ When an agent's persistent memory carries a system-assigned governance marker â€
 
 This repository contains the BEC item set, the evaluation harness, and the raw run outputs accompanying the paper:
 
-> **Present but Not Enforced: Benchmarking Governance-Marker Compliance in LLM Agent Memory Under Multi-Turn Pressure.** Xiaoyang Yu, 2026. arXiv:XXXX.XXXXX *(link to be added)*.
+> **Present but Not Enforced: Benchmarking Governance-Marker Compliance in LLM Agent Memory Under Multi-Turn Pressure.** Xiaoyang Yu, 2026. Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20698357.svg)](https://doi.org/10.5281/zenodo.20698357)
 
 ## What it measures
 
@@ -135,15 +135,14 @@ Samples 30 items (seed=42) and re-judges them with cross-family models to measur
 
 ```bibtex
 @misc{yu2026bec,
-  title         = {Present but Not Enforced: Benchmarking Governance-Marker Compliance in LLM Agent Memory Under Multi-Turn Pressure},
-  author        = {Xiaoyang Yu},
-  year          = {2026},
-  eprint        = {XXXX.XXXXX},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CL}
+  title     = {Present but Not Enforced: Benchmarking Governance-Marker Compliance in LLM Agent Memory Under Multi-Turn Pressure},
+  author    = {Xiaoyang Yu},
+  year      = {2026},
+  doi       = {10.5281/zenodo.20698357},
+  url       = {https://doi.org/10.5281/zenodo.20698357},
+  publisher = {Zenodo}
 }
 ```
-*(Fill in the arXiv ID after the preprint is posted.)*
 
 ## License
 
